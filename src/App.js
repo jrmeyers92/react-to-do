@@ -4,10 +4,14 @@ import Input from "./components/Input";
 import List from "./components/List";
 
 class App extends React.Component {
+    state = {results: [ ] };
 
     onInputSubmit = (term) => {
-        console.log(term);
+        this.setState( { results: [...this.state.results, term] })
     }
+
+
+
 
     render() {
 
@@ -15,7 +19,7 @@ class App extends React.Component {
             <div className="ui container">
                 <HeadingMain />
                 <Input  onSubmit = {this.onInputSubmit}/>
-                <List />
+                <List input = { this.state.results }/>
             </div>
             
         );

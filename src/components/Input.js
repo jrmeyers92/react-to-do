@@ -5,6 +5,7 @@ class Input extends React.Component {
     state = {term: " "};
 
     onInputSubmit = event => {
+        event.preventDefault();
         this.props.onSubmit(this.state.term);
     }
 
