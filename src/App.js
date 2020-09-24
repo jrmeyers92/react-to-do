@@ -4,15 +4,24 @@ import Input from "./components/Input";
 
 
 class App extends React.Component {
+    state = {todo: " "}
+
+    onFormSubmit(term) {
+       const term1 = term;
+
+       return term1;
+       
+    }
 
 
 
     render() {
+        console.log(term1)
 
         return (
             <div className="ui container">
                 <HeadingMain />
-                <Input  />
+                <Input onSubmit = {this.onFormSubmit} />
             </div>
           
             
