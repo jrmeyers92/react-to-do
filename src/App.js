@@ -1,27 +1,26 @@
 import React from "react";
 import HeadingMain from "./components/HeadingMain";
 import Input from "./components/Input";
+import ItemsList from "./components/ItemsList";
 
 
 class App extends React.Component {
-    state = {todo: " "}
+    state = {todo: ["",""] };
 
-    onFormSubmit(term) {
-       const term1 = term;
-
-       return term1;
-       
-    }
+    onFormSubmit = (term) => {
+        this.setState({todo : [...this.state.todo, term]});
+    };
 
 
 
     render() {
-        console.log(term1)
+    
 
         return (
             <div className="ui container">
                 <HeadingMain />
                 <Input onSubmit = {this.onFormSubmit} />
+                <ItemsList todos = {this.state.todo} />
             </div>
           
             
