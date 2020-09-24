@@ -1,7 +1,7 @@
 import React from "react";
 import HeadingMain from "./components/HeadingMain";
 import Input from "./components/Input";
-import List from "./components/List";
+import ItemsList from "./components/ItemsList";
 
 class App extends React.Component {
     state = {results: [ ] };
@@ -11,15 +11,13 @@ class App extends React.Component {
     }
 
 
-
-
     render() {
 
         return (
             <div className="ui container">
                 <HeadingMain />
                 <Input  onSubmit = {this.onInputSubmit}/>
-                <List input = { this.state.results }/>
+                <ItemsList input = { this.state.results }/>
             </div>
             
         );

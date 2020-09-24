@@ -15,8 +15,7 @@ class Input extends React.Component {
                 <form onSubmit = {this.onInputSubmit} className="ui form">
                     <div className="ui fluid big input">
                         <input 
-                        type="text" 
-                        placeholder="Input to-do item" 
+                        type="text"  
                         onChange= { (e) => this.setState( { term: e.target.value })}
                         value = {this.state.term}
                         />
