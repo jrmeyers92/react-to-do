@@ -17,7 +17,7 @@
 	justify-content: center;
 }
 
-.x-icon {
+.x {
 	transform: translateY(3px);
 	padding-right: 3rem;
 	cursor: pointer;
@@ -26,4 +26,8 @@
 .check {
 	transform: translateY(3px);
 	cursor: pointer;
+}
+
+.none {
+	display: none;
 }

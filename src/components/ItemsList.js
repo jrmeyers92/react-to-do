@@ -2,18 +2,19 @@ import React from "react";
 import "./ItemList.css";
 
 const ItemsList = (props) => {
-	const onXClick = () => {
-		console.log("hi");
+	const onXClick = (e) => {
+		// e.preventDefault();
+		e.target.parentElement.parentElement.className.add("none");
 	};
 
 	const todos = props.todos.map((todo) => {
 		return (
-			<div className='list-item'>
+			<div className='list-item' key={todo.value}>
 				<div className='left'>
-					<i class='x icon x-icon' onClick={onXClick}></i>
+					<i className='x icon' onClick={onXClick}></i>
 					<p className='list-item__item'>{todo}</p>
 				</div>
-				<i class='check icon'></i>
+				<i className='check icon'></i>
 			</div>
 		);
 	});
