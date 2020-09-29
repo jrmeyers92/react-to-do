@@ -1,0 +1,29 @@
+.theItemList {
+	margin-top: 3rem;
+}
+
+.list-item {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/* margin: 1rem; */
+	font-size: 1.5rem;
+}
+
+.left {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.x-icon {
+	transform: translateY(3px);
+	padding-right: 3rem;
+	cursor: pointer;
+}
+
+.check {
+	transform: translateY(3px);
+	cursor: pointer;
+}
